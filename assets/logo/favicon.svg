@@ -1,0 +1,16 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="tamakarsa_dev-light">
+<g id="Type=Icon" clip-path="url(#clip0_2_4)">
+<g id="Icon">
+<rect id="Tile" width="96" height="96" rx="21.12" fill="#14213D"/>
+<path id="T" d="M53.7598 72.9602H42.2403V40.3195H24.96V28.8H71.0401V40.3195H53.7598V72.9602Z" fill="#F7F5F0"/>
+<circle id="Dot" cx="71.04" cy="69.12" r="6.72" fill="#F5A524"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_2_4">
+<rect width="96" height="96" fill="white"/>
+</clipPath>
+</defs>
+</svg>
