@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
@@ -170,15 +170,25 @@
 
   <!-- CARA KERJA -->
   <section id="cara-kerja" class="band">
-    <div class="container">
-      <p class="eyebrow eyebrow-dark">// cara kerja</p>
-      <h2>Harga dan jadwal disepakati tertulis di awal.</h2>
-      <p class="band-sub">Kalau ada perubahan, kamu tahu lebih dulu.</p>
-      <ol class="steps">
-        <li><span>01</span><h3>Ngobrol</h3><p>Ceritakan usahamu lewat WhatsApp. Kita cari masalah utamanya.</p></li>
-        <li><span>02</span><h3>Penawaran tertulis</h3><p>Ruang lingkup, harga, dan tanggal selesai ditulis jelas.</p></li>
-        <li><span>03</span><h3>Dikerjakan per tahap</h3><p>Kamu lihat hasilnya tiap tahap, bukan cuma di akhir.</p></li>
-        <li><span>04</span><h3>Live</h3><p>Website atau aplikasi dipakai. Ada kendala, tinggal chat.</p></li>
+    <div class="container how">
+      <div class="how-intro">
+        <p class="eyebrow eyebrow-dark">// cara kerja</p>
+        <h2>Harga dan jadwal disepakati tertulis di awal.</h2>
+        <p class="band-sub">Kalau ada perubahan, kamu tahu lebih dulu.</p>
+        <ul class="how-checks">
+          <li>Penawaran tertulis: ruang lingkup, harga, tanggal selesai</li>
+          <li>Harga tetap selama ruang lingkup tidak berubah</li>
+          <li>Hasil bisa dilihat di tiap tahap</li>
+        </ul>
+        <a class="btn btn-amber" href="https://wa.me/6285119541842?text=Halo%20Tamakarsa%20Dev%2C%20saya%20mau%20tanya%20soal%20website%20untuk%20usaha%20saya." target="_blank" rel="noopener">
+          Mulai ngobrol <span class="btn-dot" aria-hidden="true">→</span>
+        </a>
+      </div>
+      <ol class="timeline">
+        <li><span>01</span><div><h3>Ngobrol</h3><p>Ceritakan usahamu lewat WhatsApp. Kita cari masalah utamanya.</p></div></li>
+        <li><span>02</span><div><h3>Penawaran tertulis</h3><p>Ruang lingkup, harga, dan tanggal selesai ditulis jelas.</p></div></li>
+        <li><span>03</span><div><h3>Dikerjakan per tahap</h3><p>Kamu lihat hasilnya tiap tahap, bukan cuma di akhir.</p></div></li>
+        <li><span>04</span><div><h3>Live</h3><p>Website atau aplikasi dipakai. Ada kendala, tinggal chat.</p></div></li>
       </ol>
     </div>
   </section>
@@ -194,9 +204,37 @@
 </main>
 
 <footer class="footer">
-  <div class="container footer-inner">
-    <img src="assets/logo/lockup-dark.svg" alt="tamakarsa_dev" width="161" height="28">
-    <p>WhatsApp <a href="https://wa.me/6285119541842" target="_blank" rel="noopener">0851-1954-1842</a></p>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo/lockup-dark.svg" alt="tamakarsa_dev" width="161" height="28">
+      <p>Website dan aplikasi yang pas, supaya usahamu ditemukan dan dipercaya pelanggan.</p>
+    </div>
+    <nav aria-label="Layanan">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="#layanan">Website usaha</a></li>
+        <li><a href="#layanan">Booking ke WhatsApp</a></li>
+        <li><a href="#layanan">Sistem pencatatan</a></li>
+        <li><a href="#layanan">Aplikasi mobile</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Navigasi">
+      <h4>Navigasi</h4>
+      <ul>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#karya">Karya</a></li>
+        <li><a href="#cara-kerja">Cara kerja</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h4>Kontak</h4>
+      <ul>
+        <li>WhatsApp <a class="nowrap" href="https://wa.me/6285119541842" target="_blank" rel="noopener">0851-1954-1842</a></li>
+        <li><a href="https://tamakarsadev.my.id/">tamakarsadev.my.id</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
     <p class="muted">© 2026 Tamakarsa Dev. Arunika Cliff Villas dan Tumapel Rent Car adalah demo fiktif.</p>
   </div>
 </footer>
