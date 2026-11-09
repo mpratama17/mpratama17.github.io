@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -100,67 +100,62 @@
       <div>
         <p class="eyebrow">// karya terbaru</p>
         <h2>Yang sudah dikerjakan.</h2>
+        <p class="section-sub">Data di tiap tangkapan layar adalah contoh, bukan data client.</p>
       </div>
-      <p class="section-sub">Data di tiap tangkapan layar adalah contoh, bukan data client.</p>
+      <div class="rail-nav">
+        <span class="rail-count" aria-hidden="true">6 karya</span>
+        <button class="rail-btn" type="button" data-dir="-1" aria-label="Karya sebelumnya" aria-controls="karya-rail">‹</button>
+        <button class="rail-btn" type="button" data-dir="1" aria-label="Karya berikutnya" aria-controls="karya-rail">›</button>
+      </div>
     </div>
 
-    <article class="feature">
-      <a class="feature-shot" href="https://arunika-cliff-villa.tamakarsadev.my.id/" target="_blank" rel="noopener">
-        <img src="assets/karya/arunika.jpg" alt="Halaman depan Arunika Cliff Villas: foto vila dengan kolam renang dan tombol Book Now" width="1400" height="836" loading="lazy">
-      </a>
-      <div class="feature-body">
-        <span class="status">demo · vila fiktif</span>
-        <h3>Arunika Cliff Villas</h3>
-        <p>Landing page vila di Lombok dengan booking langsung ke WhatsApp. Tamu memilih kamar dan tanggal, pesannya masuk ke chat pemilik.</p>
-        <ul class="tags"><li>Website</li><li>Booking WA</li><li>HTML/CSS/JS</li></ul>
-        <div class="links">
-          <a class="btn btn-navy btn-sm" href="https://arunika-cliff-villa.tamakarsadev.my.id/" target="_blank" rel="noopener">Lihat demo →</a>
+    <div class="rail" id="karya-rail" tabindex="0" role="region" aria-label="Daftar karya, geser ke samping">
+      <article class="card">
+        <div class="shot"><img src="assets/karya/arunika.jpg" alt="Halaman depan Arunika Cliff Villas: foto vila dengan kolam renang dan tombol Book Now" width="1400" height="836" loading="lazy"></div>
+        <div class="card-body">
+          <div class="card-meta"><span class="status">demo · vila fiktif</span><ul class="tags"><li>Website</li><li>Booking WA</li></ul></div>
+          <h3>Arunika Cliff Villas</h3>
+          <p>Landing page vila di Lombok dengan booking langsung ke WhatsApp. Tamu memilih kamar dan tanggal, pesannya masuk ke chat pemilik.</p>
+          <a class="link card-link" href="https://arunika-cliff-villa.tamakarsadev.my.id/" target="_blank" rel="noopener">Lihat demo →</a>
         </div>
-      </div>
-    </article>
-
-    <div class="grid">
+      </article>
       <article class="card">
         <div class="shot"><img src="assets/karya/tumapel.jpg?v=2" alt="Tumapel Rent Car: halaman depan dengan foto mobil, harga sewa, dan tombol booking WhatsApp" width="1384" height="778" loading="lazy"></div>
         <div class="card-body">
-          <span class="status">demo · rental fiktif</span>
+          <div class="card-meta"><span class="status">demo · rental fiktif</span><ul class="tags"><li>Website</li><li>Booking WA</li></ul></div>
           <h3>Tumapel Rent Car</h3>
           <p>Website rental mobil di Malang: daftar unit dengan harga per 12/24 jam, estimasi biaya otomatis, dan booking yang langsung jadi pesan WhatsApp ke admin.</p>
-          <a class="link" href="https://tumapel-rentcar.tamakarsadev.my.id/" target="_blank" rel="noopener">Lihat demo →</a>
+          <a class="link card-link" href="https://tumapel-rentcar.tamakarsadev.my.id/" target="_blank" rel="noopener">Lihat demo →</a>
         </div>
       </article>
-
       <article class="card">
         <div class="shot shot-phone shot-matahari"><img src="assets/karya/matahari.jpg" alt="Aplikasi Matahari Living: beranda dengan pencarian rumah dan rekomendasi properti" width="562" height="1000" loading="lazy"></div>
         <div class="card-body">
-          <span class="status status-wip">dalam pengerjaan</span>
+          <div class="card-meta"><span class="status status-wip">dalam pengerjaan</span><ul class="tags"><li>Aplikasi mobile</li><li>Flutter</li></ul></div>
           <h3>Matahari Property</h3>
           <p>Aplikasi Android &amp; iOS untuk agen dan pembeli properti. Agen titip rumah, pembeli dapat notifikasi sesuai wilayah dan harga. Peran: tampilan aplikasi (Flutter) dan koneksi ke API.</p>
         </div>
       </article>
-
       <article class="card">
         <div class="shot"><img src="assets/karya/star-garage.jpg" alt="Star Garage ERP: beranda berisi omzet, laba, saldo rekening, dan grafik pemasukan" width="1400" height="875" loading="lazy"></div>
         <div class="card-body">
-          <span class="status status-wip">dalam pengerjaan</span>
+          <div class="card-meta"><span class="status status-wip">dalam pengerjaan</span><ul class="tags"><li>Sistem pencatatan</li><li>Desktop</li></ul></div>
           <h3>Star Garage ERP</h3>
           <p>Aplikasi kasir, stok, kas, gaji, dan laporan laba rugi untuk bengkel. Jalan offline di Mac, tanpa biaya bulanan.</p>
         </div>
       </article>
-
       <article class="card">
         <div class="shot"><img src="assets/karya/sirviu.jpg" alt="SIRVIU: dashboard review dokumen dengan ringkasan status dan tabel dokumen" width="1300" height="470" loading="lazy"></div>
         <div class="card-body">
-          <span class="status status-live">live · dipakai</span>
+          <div class="card-meta"><span class="status status-live">live · dipakai</span><ul class="tags"><li>Aplikasi web</li></ul></div>
           <h3>SIRVIU</h3>
           <p>Alur review dokumen berjenjang untuk sebuah instansi pemerintah. Tiap tahap tercatat, lengkap dengan riwayat dan notifikasi.</p>
         </div>
       </article>
-
       <article class="card">
         <div class="shot shot-phone shot-navy"><img src="assets/karya/undangan.jpg" alt="Undangan digital: halaman sampul dengan nama mempelai dan tombol Buka Undangan" width="416" height="900" loading="lazy"></div>
         <div class="card-body">
-          <span class="status status-live">selesai · versi demo</span>
+          <div class="card-meta"><span class="status status-live">selesai · versi demo</span><ul class="tags"><li>Website</li></ul></div>
           <h3>Undangan digital</h3>
           <p>Undangan pernikahan adat Sasak untuk HP: nama tamu personal, hitung mundur, peta lokasi, dan kirim WA per tamu.</p>
         </div>
@@ -239,5 +234,19 @@
   </div>
 </footer>
 
+<script>
+  // Tombol ‹ › menggeser rail satu kartu; redup di ujung.
+  const rail = document.getElementById('karya-rail');
+  const btns = document.querySelectorAll('.rail-btn');
+  const step = () => rail.querySelector('.card').offsetWidth + parseFloat(getComputedStyle(rail).columnGap || 0);
+  btns.forEach(b => b.addEventListener('click', () => rail.scrollBy({ left: step() * b.dataset.dir, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })));
+  const sync = () => {
+    btns[0].disabled = rail.scrollLeft < 4;
+    btns[1].disabled = rail.scrollLeft + rail.clientWidth > rail.scrollWidth - 4;
+  };
+  rail.addEventListener('scroll', sync, { passive: true });
+  addEventListener('resize', sync);
+  sync();
+</script>
 </body>
 </html>
