@@ -241,3 +241,4 @@ p { margin: 0; text-wrap: pretty; }
   .card:hover { transform: none; }
 }
 .nowrap { white-space: nowrap; }
+.hero-note + .hero-note { margin-top: 6px; }
