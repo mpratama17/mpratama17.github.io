@@ -235,7 +235,9 @@ p { margin: 0; text-wrap: pretty; }
 @media (max-width: 640px) {
   .nav-links { display: none; }
   .nav { padding-left: 14px; }
-  .nav-logo img { height: 26px; }
+  .nav .btn { white-space: nowrap; flex: none; padding-inline: 14px; } /* tombol tetap 1 baris; logo yang mengecil */
+  .nav-logo { min-width: 0; }
+  .nav-logo img { width: 150px; max-width: 100%; height: auto; } /* = tinggi 26px, mengecil kalau sempit */
   .section { padding-top: 72px; }
   .services { grid-template-columns: 1fr; }
   .rail { --gap: 14px; }
