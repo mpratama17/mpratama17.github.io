@@ -86,6 +86,8 @@ p { margin: 0; text-wrap: pretty; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 .hero-note { margin-top: 18px; font: 500 0.85rem var(--mono); color: var(--slate); }
 .hero-note::before { content: "✓ "; color: var(--amber-700); }
+.hero-note + .hero-note { margin-top: 6px; }
+.eyebrow, .hero-note { text-wrap: balance; }
 
 .hero-visual { position: relative; padding: 0 0 40px 0; }
 .browser {
@@ -159,16 +161,17 @@ p { margin: 0; text-wrap: pretty; }
   background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
   overflow: hidden; display: flex; flex-direction: column;
 }
-.shot { aspect-ratio: 16 / 9; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--paper); }
-.shot img { width: 100%; height: 100%; object-fit: cover; object-position: left top; }
-.shot-phone { display: flex; justify-content: center; align-items: flex-end; padding-top: 28px; }
-.shot-phone img { width: 42%; height: auto; border-radius: 14px 14px 0 0; box-shadow: 0 -8px 30px rgb(20 33 61 / 0.25); }
-.shot-matahari { background: #1F2BD6; } /* warna bingkai bawaan screenshot store */
-.shot-navy { background: var(--navy); }
+/* Thumbnail karya: latar navy + judul + tangkapan layar dalam bingkai perangkat, sama untuk semua kartu */
+.shot { aspect-ratio: 16 / 10; overflow: hidden; background: linear-gradient(160deg, #FFCB66, var(--amber)); display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 12px; padding: 16px 20px 0; }
+.shot::before { content: attr(data-title); content: attr(data-title) / ""; grid-column: 1 / -1; text-align: center; font: 700 1rem/1.2 var(--mono); color: var(--navy); }
+.shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; background: var(--white); border: 5px solid var(--navy); border-bottom: 0; border-radius: 12px 12px 0 0; box-shadow: 0 -8px 24px rgb(20 33 61 / 0.25); }
+.shot-wide img { object-fit: contain; background: #F6FBFC; } /* tangkapan layar lebar: tampil utuh, sisanya warna latar halamannya */
+.shot-phone { grid-template-columns: repeat(3, 25%); justify-content: center; column-gap: 5%; }
+.shot-phone img { border-width: 4px; border-radius: 16px 16px 0 0; }
 .card-body { padding: 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .card-body h3 { font-size: 1.15rem; }
-.card-body p { color: var(--slate); font-size: 0.93rem; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
-.card-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.card-body p { color: var(--slate); font-size: 0.93rem; }
+.card-meta { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
 .card-link { margin-top: auto; padding-top: 8px; }
 .card { transition: transform .2s ease, box-shadow .2s ease; }
 .card:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgb(20 33 61 / 0.08); }
@@ -189,6 +192,18 @@ p { margin: 0; text-wrap: pretty; }
 .timeline span { width: 52px; height: 52px; border-radius: 14px; background: var(--navy-700); color: var(--amber); display: grid; place-items: center; font: 700 1rem var(--mono); }
 .timeline h3 { margin: 12px 0 6px; }
 .timeline p { color: #C9CEDA; font-size: 0.95rem; max-width: 44ch; }
+
+/* FAQ: <details> bawaan browser, tanpa JS */
+.faq { display: grid; grid-template-columns: 4fr 7fr; gap: 64px; align-items: start; }
+.faq .section-sub { margin-top: 14px; }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; padding: 16px 4px; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: "+"; flex: none; font: 700 1.3rem/1 var(--mono); color: var(--amber-700); }
+.faq-list details[open] summary::after { content: "\2212"; }
+.faq-list h3 { font-size: 1.05rem; }
+.faq-list details p { color: var(--slate); padding: 0 4px 22px; max-width: 62ch; }
 
 /* CTA */
 .cta { text-align: center; padding-block: 104px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
@@ -212,6 +227,7 @@ p { margin: 0; text-wrap: pretty; }
   .services { grid-template-columns: repeat(2, 1fr); }
   .how { grid-template-columns: 1fr; gap: 48px; }
   .how-intro { position: static; }
+  .faq { grid-template-columns: 1fr; gap: 28px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
   .rail > .card { flex-basis: calc((100% - var(--gap)) / 2.2); }
