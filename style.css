@@ -295,3 +295,7 @@ p { margin: 0; text-wrap: pretty; }
 /* Penanda toko aplikasi di kartu (bukan link; kartunya yang diklik) */
 .stores { margin-top: auto; padding: 8px 0 0; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
 .stores li { display: inline-flex; align-items: center; gap: 6px; font: 500 0.75rem var(--mono); padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--navy); }
+
+/* Kontak footer: ikon platform */
+.footer .ct { display: flex; align-items: center; gap: 10px; }
+.footer .ct svg { flex: none; color: var(--amber); }
