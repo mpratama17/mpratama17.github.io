@@ -259,3 +259,6 @@ p { margin: 0; text-wrap: pretty; }
   .card:hover { transform: none; }
 }
 .nowrap { white-space: nowrap; }
+.shot-store { display: flex; padding: 0; }
+.shot-store::before { content: none; }
+.shot-store img { flex: 1; min-width: 0; border: 0; border-radius: 0; box-shadow: none; }
