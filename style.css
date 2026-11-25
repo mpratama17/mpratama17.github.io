@@ -262,3 +262,36 @@ p { margin: 0; text-wrap: pretty; }
 .shot-store { display: flex; padding: 0; }
 .shot-store::before { content: none; }
 .shot-store img { flex: 1; min-width: 0; border: 0; border-radius: 0; box-shadow: none; }
+
+/* Halaman studi kasus */
+.case { padding-top: 120px; max-width: 820px; }
+.crumbs { font: 500 0.8rem/1.4 var(--mono); color: var(--slate); margin-bottom: 20px; }
+.crumbs a:hover { color: var(--amber-700); }
+.case h1 { margin-bottom: 18px; }
+.case-lead { font-size: 1.1rem; color: var(--navy-700); margin-bottom: 20px; }
+.case-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
+.case-links { margin-bottom: 8px; }
+.case-shot { margin-block: 28px 8px; border-radius: 16px; overflow: hidden; background: linear-gradient(160deg, #FFCB66, var(--amber)); }
+.case-shot img { display: block; width: 100%; height: auto; }
+.case-shot-store { display: flex; }
+.case-shot-store img { flex: 1; min-width: 0; }
+.case-sec { margin-top: 40px; }
+.case-sec h2 { font-size: 1.35rem; margin-bottom: 12px; }
+.case-sec p { color: var(--slate); margin-bottom: 12px; }
+.case-sec ul { color: var(--slate); padding-left: 1.2em; display: grid; gap: 8px; }
+.case-sec strong { color: var(--navy); }
+
+/* Kartu yang bisa diklik: link di judul diperluas menutupi seluruh kartu */
+.card:has(.card-main) { position: relative; cursor: pointer; }
+.card-main::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.card-main { text-decoration: none; }
+.card-arrow { display: inline-block; color: var(--amber-700); transition: transform .2s ease; }
+.card:hover .card-main { color: var(--amber-700); text-decoration: underline; text-underline-offset: 4px; }
+.card:hover .card-arrow { transform: translateX(4px); }
+.card:has(.card-main:focus-visible) { outline: 2px solid var(--navy); outline-offset: 3px; }
+.card-main:focus-visible { outline: none; }
+@media (prefers-reduced-motion: reduce) { .card-arrow { transition: none; } }
+
+/* Penanda toko aplikasi di kartu (bukan link; kartunya yang diklik) */
+.stores { margin-top: auto; padding: 8px 0 0; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+.stores li { display: inline-flex; align-items: center; gap: 6px; font: 500 0.75rem var(--mono); padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--navy); }

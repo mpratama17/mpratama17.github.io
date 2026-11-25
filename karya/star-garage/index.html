@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Star Garage ERP: Aplikasi Kasir, Stok, dan Laporan Bengkel | Studi Kasus Tamakarsa Dev</title>
+  <link rel="canonical" href="https://tamakarsadev.my.id/karya/star-garage/">
+  <meta name="description" content="Studi kasus Star Garage ERP: aplikasi desktop macOS offline untuk bengkel. Satu invoice menjadi sumber stok, kas, laporan laba rugi, dan insentif teknisi. Tanpa biaya bulanan.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="Tamakarsa Dev">
+  <meta property="og:title" content="Star Garage ERP: Aplikasi Kasir, Stok, dan Laporan Bengkel | Studi Kasus Tamakarsa Dev">
+  <meta property="og:description" content="Studi kasus Star Garage ERP: aplikasi desktop macOS offline untuk bengkel. Satu invoice menjadi sumber stok, kas, laporan laba rugi, dan insentif teknisi. Tanpa biaya bulanan.">
+  <meta property="og:url" content="https://tamakarsadev.my.id/karya/star-garage/">
+  <meta property="og:image" content="https://tamakarsadev.my.id/assets/karya/star-garage.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css?v=10">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://tamakarsadev.my.id/karya/star-garage/#article","headline":"Star Garage ERP: aplikasi kasir, stok, kas, gaji, dan laporan untuk bengkel","description":"Studi kasus Star Garage ERP: aplikasi desktop macOS offline untuk bengkel. Satu invoice menjadi sumber stok, kas, laporan laba rugi, dan insentif teknisi. Tanpa biaya bulanan.","inLanguage":"id-ID","datePublished":"2026-11-25","dateModified":"2026-11-25","mainEntityOfPage":"https://tamakarsadev.my.id/karya/star-garage/","image":"https://tamakarsadev.my.id/assets/karya/star-garage.jpg","author":{"@id":"https://tamakarsadev.my.id/#business"},"publisher":{"@id":"https://tamakarsadev.my.id/#business"},"about":{"@type":"SoftwareApplication","name":"Star Garage ERP","operatingSystem":"macOS","applicationCategory":"BusinessApplication"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tamakarsa Dev","item":"https://tamakarsadev.my.id/"},{"@type":"ListItem","position":2,"name":"Karya","item":"https://tamakarsadev.my.id/#karya"},{"@type":"ListItem","position":3,"name":"Star Garage ERP","item":"https://tamakarsadev.my.id/karya/star-garage/"}]}]}</script>
+</head>
+<body>
+
+<header class="nav-wrap">
+  <nav class="nav" aria-label="Utama">
+    <a href="/" class="nav-logo"><img src="/assets/logo/lockup-dark.svg" alt="tamakarsa_dev" width="184" height="32"></a>
+    <ul class="nav-links">
+      <li><a href="/#layanan">Layanan</a></li>
+      <li><a href="/#karya">Karya</a></li>
+      <li><a href="/#cara-kerja">Cara kerja</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-amber btn-sm" href="https://wa.me/6285119541842?text=Halo%20Tamakarsa%20Dev%2C%20saya%20mau%20tanya%20soal%20website%20untuk%20usaha%20saya." target="_blank" rel="noopener">Chat WhatsApp</a>
+  </nav>
+</header>
+
+<main class="container case">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Tamakarsa Dev</a> / <a href="/#karya">Karya</a> / Star Garage ERP</nav>
+  <p class="eyebrow">// studi kasus</p>
+  <h1>Star Garage ERP: aplikasi kasir, stok, kas, gaji, dan laporan untuk bengkel</h1>
+  <p class="case-lead">Star Garage ERP adalah aplikasi desktop macOS untuk Star Garage, bengkel modifikasi dan restorasi lampu mobil (member Yoong Motor). Satu invoice di kasir otomatis mengurus stok, kas, laporan laba rugi, dan insentif teknisi, menggantikan Kledo dan beberapa Google Sheet. Aplikasi berjalan offline di satu komputer kasir, tanpa biaya bulanan, dan sudah dipakai klien.</p>
+  <div class="case-meta"><span class="status status-live">live · dipakai</span><ul class="tags"><li>Sistem pencatatan</li><li>Desktop</li><li>macOS</li><li>Flutter</li></ul></div>
+  
+  <div class="case-shot case-shot-wide"><img src="/assets/karya/star-garage.jpg" alt="Star Garage ERP: beranda berisi omzet, laba, saldo rekening, dan grafik pemasukan (data contoh)" width="1400" height="875" loading="lazy"></div>
+  <section class="case-sec"><h2>Masalah</h2><p>Sebelumnya bengkel mencatat dengan Kledo dan beberapa Google Sheet:</p><ul><li>Satu transaksi diketik tiga kali: di Kledo, di sheet penjualan, dan di sheet insentif.</li><li>"Profit" bulanan mencampur pembelian stok, gaji, dan pengeluaran pribadi, jadi angkanya tidak menunjukkan laba sebenarnya.</li><li>Tidak ada daftar produk baku: barang yang sama tercatat dengan sekitar 210 nama berbeda.</li><li>Total dihitung dengan rumus dan salin-tempel manual, sehingga rawan salah hitung.</li><li>Langganan Kledo berbayar, dan datanya sulit diekspor.</li></ul></section><section class="case-sec"><h2>Solusi</h2><p>Satu aplikasi dengan satu sumber data. Invoice menjadi sumber untuk stok, kas, laporan, dan insentif, jadi tidak ada yang perlu diketik ulang.</p><ul><li><strong>Kasir dan invoice:</strong> pemesanan dengan DP, pembayaran bertahap per rekening, status lunas, nota PDF, dan kirim nota lewat WhatsApp.</li><li><strong>Stok dan pembelian:</strong> stok dihitung dari buku stok. Ada stok opname dan impor/ekspor Excel.</li><li><strong>Kas dan bank:</strong> saldo tiap rekening, mutasi, dan transfer antar rekening.</li><li><strong>Biaya dan gaji:</strong> biaya operasional dipisah dari pengeluaran pribadi. Slip gaji dan insentif teknisi dihitung dari pekerjaan yang tercatat.</li><li><strong>Laporan:</strong> laba rugi, neraca, arus kas, dan buku besar, semuanya bisa diekspor ke Excel.</li><li><strong>Hak akses:</strong> data sensitif seperti laba, saldo, dan gaji hanya bisa dibuka owner dengan PIN. Aturan ini dicek di lapisan data.</li></ul></section><section class="case-sec"><h2>Peran Tamakarsa Dev</h2><p>Merancang dan membangun seluruh aplikasi: skema data, aturan bisnis, antarmuka, dan pengujian, lalu merilisnya sebagai file instalasi macOS dalam beberapa ronde revisi bersama pemilik bengkel.</p></section><section class="case-sec"><h2>Teknologi</h2><ul><li>Flutter (desktop macOS)</li><li>SQLite lewat drift, data tersimpan lokal dengan backup otomatis</li><li>GetX untuk pengelolaan state</li></ul></section><section class="case-sec"><h2>Hasil</h2><ul><li>Berjalan offline di satu komputer kasir, tanpa server, domain, atau langganan: Rp 0 per bulan.</li><li>Rilis 1.6.0 dipakai bengkel sejak November 2026.</li><li>Laba rugi dihitung benar: pendapatan, dikurangi HPP dan biaya operasional (termasuk gaji), menjadi laba bersih usaha. Pengeluaran pribadi dihitung terpisah.</li><li>Data milik bengkel sendiri dan bisa diekspor ke Excel kapan saja.</li></ul></section>
+  <section class="cta">
+    <h2>Butuh sistem pencatatan untuk usahamu?</h2>
+    <p>Ceritakan dulu, gratis. Harga dan jadwal disepakati tertulis di awal.</p>
+    <a class="btn btn-navy" href="https://wa.me/6285119541842?text=Halo%20Tamakarsa%20Dev%2C%20saya%20mau%20tanya%20soal%20website%20untuk%20usaha%20saya." target="_blank" rel="noopener">Chat WhatsApp <span class="btn-dot" aria-hidden="true">→</span></a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="/assets/logo/lockup-dark.svg" alt="tamakarsa_dev" width="161" height="28">
+      <p>Website dan aplikasi yang pas, supaya usahamu ditemukan dan dipercaya pelanggan. Berbasis di Malang, melayani Malang, Surabaya, dan Lombok.</p>
+    </div>
+    <nav aria-label="Layanan">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="/#layanan">Website usaha</a></li>
+        <li><a href="/#layanan">Booking ke WhatsApp</a></li>
+        <li><a href="/#layanan">Sistem pencatatan</a></li>
+        <li><a href="/#layanan">Aplikasi mobile</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Navigasi">
+      <h4>Navigasi</h4>
+      <ul>
+        <li><a href="/#layanan">Layanan</a></li>
+        <li><a href="/#karya">Karya</a></li>
+        <li><a href="/#cara-kerja">Cara kerja</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h4>Kontak</h4>
+      <ul>
+        <li>WhatsApp <a class="nowrap" href="https://wa.me/6285119541842" target="_blank" rel="noopener">0851-1954-1842</a></li>
+        <li><a href="mailto:tamakarsa.dev@gmail.com">tamakarsa.dev@gmail.com</a></li>
+        <li>Instagram <a href="https://www.instagram.com/tamakarsa.dev" target="_blank" rel="noopener">@tamakarsa.dev</a></li>
+        <li>TikTok <a href="https://www.tiktok.com/@tamakarsa.dev" target="_blank" rel="noopener">@tamakarsa.dev</a></li>
+        <li><a href="https://tamakarsadev.my.id/">tamakarsadev.my.id</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p class="muted">© 2026 Tamakarsa Dev. Arunika Cliff Villas dan Tumapel Rent Car adalah demo fiktif.</p>
+  </div>
+</footer>
+</body>
+</html>
